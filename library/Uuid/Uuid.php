@@ -27,10 +27,13 @@ class Uuid {
      * @param null|string $chars
      *
      * @return Uuid
+     * @throws \UnexpectedValueException
      */
     public function setUuid($chars = null){
         if (null === $chars && 32 != strlen($chars)) {
             $chars = md5 ( uniqid ( mt_rand (), true ) );
+        } elseif ($chars !== null && 32 !== strlen($chars)){
+            throw new \UnexpectedValueException('invalid characters for UUID generation provided');
         }
         $this->uuid =
             substr ( $chars, 0, 8 )  . '-' .
@@ -55,7 +58,7 @@ class Uuid {
      * string overload method
      */
     public function __toString(){
-        return (string) $this->getUuid();
+        return (string) $this->uuid;
     }
 
     /**
@@ -67,6 +70,7 @@ class Uuid {
      */
     public static function generate($value = null)
     {
-        return (string) new self($value);
+        $uuid = new self($value);
+        return $uuid->__toString();
     }
 }

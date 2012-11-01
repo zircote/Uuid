@@ -5,8 +5,8 @@
          convertWarningsToExceptions="true"
          stopOnFailure="false"
          syntaxCheck="true">
-    <testsuite name="Rhubarb Library Test Suite">
-        <directory>library/Rhubarb</directory>
+    <testsuite name="Uuid Library Test Suite">
+        <directory>library/Uuid</directory>
     </testsuite>
     <logging>
         <!--<log type="coverage-text" target="php://stdout"-->
@@ -21,7 +21,7 @@
             <directory suffix=".php">../</directory>
         </blacklist>
         <whitelist>
-            <directory suffix=".php">../library/Rhubarb</directory>
+            <directory suffix=".php">../library/Uuid</directory>
             <exclude>
                 <directory suffix=".phtml">../</directory>
                 <file>./bootstrap.php</file>

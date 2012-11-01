@@ -1,0 +1,23 @@
+{
+    "name": "zircote/uuid",
+    "description": "A PHP UUID object",
+    "minimum-stability": "alpha",
+    "repositories":[
+            {
+            "type": "vcs",
+            "url": "git://github.com/zircote/Uuid.git"
+        }
+    ],
+    "authors": [
+        {
+            "name": "Robert Allen",
+            "email": "zircote@gmail.com"
+        }
+    ],
+    "autoload":{
+        "psr-0":{
+            "Uuid":"library",
+            "UuidTests":"tests/library"
+        }
+    }
+}

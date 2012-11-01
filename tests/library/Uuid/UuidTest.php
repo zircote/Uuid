@@ -18,8 +18,8 @@ class UuidTest extends \PHPUnit_Framework_TestCase
     public function testSetUuid()
     {
         $expected = '7bda4f10-62bb-11df-9e4d-5ecec8f8ce7d';
-        $uuid = new \Uuid\Uuid($expected);
-        $uuid->setUuid($expected);
+        $uuid = new \Uuid\Uuid(str_replace('-','',$expected));
+//        $uuid->setUuid($expected);
         $this->assertEquals($expected, (string)$uuid);
     }
 
@@ -30,8 +30,7 @@ class UuidTest extends \PHPUnit_Framework_TestCase
     {
 
         $expected = '7bda4f10-62bb-11df-9e4d-5ecec8f8ce7d';
-        $uuid = new \Uuid\Uuid($expected);
-        $uuid->setUuid($expected);
+        $uuid = new \Uuid\Uuid(str_replace('-','',$expected));
 
         $this->assertEquals($expected, $uuid->getUuid());
     }
@@ -42,11 +41,8 @@ class UuidTest extends \PHPUnit_Framework_TestCase
     public function testGenerate()
     {
         $expected = '7bda4f10-62bb-11df-9e4d-5ecec8f8ce7d';
-        $uuid = new \Uuid\Uuid($expected);
-        $uuid->setUuid($expected);
-
-        $this->assertEquals($expected, $uuid->getUuid());
-        $this->assertNotEquals($expected, $uuid->generate());
+        $uuid = \Uuid\Uuid::generate(str_replace('-','',$expected));
+        $this->assertEquals($expected, $uuid);
     }
 
     /**
@@ -54,6 +50,6 @@ class UuidTest extends \PHPUnit_Framework_TestCase
      */
     public function testUnexpectedValueException()
     {
-        $o = new \Uuid\Uuid('jhgf');
+        new \Uuid\Uuid('jhgf');
     }
 }

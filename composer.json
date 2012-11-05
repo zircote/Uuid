@@ -1,13 +1,14 @@
 {
     "name": "zircote/uuid",
     "description": "A PHP UUID object",
+    "type": "library",
+    "homepage": "https://github.com/zircote/Uuid",
     "minimum-stability": "alpha",
-    "repositories":[
-            {
-            "type": "vcs",
-            "url": "git://github.com/zircote/Uuid.git"
-        }
-    ],
+    "license" : "Apache2",
+    "keywords": ["Uuid", "Unique ID", "random", "hash"],
+    "support": {
+        "issues": "https://github.com/zircote/Uuid/issues"
+    },
     "authors": [
         {
             "name": "Robert Allen",

@@ -5,6 +5,7 @@
     "homepage": "https://github.com/zircote/Uuid",
     "minimum-stability": "alpha",
     "license" : "Apache2",
+    "version": "0.1.0",
     "keywords": ["Uuid", "Unique ID", "random", "hash"],
     "support": {
         "issues": "https://github.com/zircote/Uuid/issues"

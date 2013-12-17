@@ -21,3 +21,7 @@ $uuid = new \Uuid\Uuid;
 echo $uuid;
 // 324e26b2-3378-3c56-6f72-424b3e20b106
 ```
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/zircote/uuid/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+

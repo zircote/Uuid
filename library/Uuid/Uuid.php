@@ -45,9 +45,9 @@ class Uuid {
      * @throws \UnexpectedValueException
      */
     public function setUuid($chars = null){
-        if (null === $chars && 32 != strlen($chars)) {
+        if (is_null($chars)) {
             $chars = md5 ( uniqid ( mt_rand (), true ) );
-        } elseif ($chars !== null && 32 !== strlen($chars)){
+        } elseif (32 !== strlen($chars)){
             throw new \UnexpectedValueException('invalid characters for UUID generation provided');
         }
         $this->uuid =
